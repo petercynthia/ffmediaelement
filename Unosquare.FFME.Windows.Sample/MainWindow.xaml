@@ -24,9 +24,14 @@
         <TaskbarItemInfo ProgressValue="{Binding PlaybackProgress}" ProgressState="{Binding PlaybackProgressState}" />
     </Window.TaskbarItemInfo>
     <Grid Name="Player">
-        <ffme:MediaElement Name="Media" Background="Black" LoadedBehavior="Play" IsDesignPreviewEnabled="True" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="1243*"/>
+        </Grid.ColumnDefinitions>
+        <ffme:MediaElement Name="Media" Background="Black" LoadedBehavior="Play" IsDesignPreviewEnabled="True" Grid.ColumnSpan="3" Margin="0,0,0,-0.24" />
 
-        <DockPanel x:Name="LayoutPanel" LastChildFill="False">
+        <DockPanel x:Name="LayoutPanel" LastChildFill="False" Grid.ColumnSpan="3" Margin="0,0,0,-0.24">
 
             <controls:ControllerPanelControl
                 x:Name="ControllerPanel"
@@ -36,7 +41,7 @@
             <controls:PlaylistPanelControl 
                 x:Name="PlaylistPanel"
                 DockPanel.Dock="Right"
-                Visibility="{Binding IsPlaylistPanelOpen, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                Visibility="{Binding IsPlaylistPanelOpen, Converter={StaticResource BooleanToVisibilityConverter}}" Height="424" Width="415" />
 
             <controls:PropertiesPanelControl 
                 x:Name="PropertiesPanel"
@@ -46,7 +51,7 @@
 
         <Grid Name="NotificationsGrid"
               MaxWidth="300" MaxHeight="56" VerticalAlignment="Top"
-              HorizontalAlignment="Left" Margin="10,10,0,0">
+              HorizontalAlignment="Left" Margin="10,10,0,0" Grid.ColumnSpan="2">
             <Grid.Style>
                 <Style TargetType="Grid">
                     <Setter Property="Opacity" Value="0" />

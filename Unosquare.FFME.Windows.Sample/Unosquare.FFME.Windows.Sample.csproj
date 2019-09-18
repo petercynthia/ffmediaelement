@@ -6,10 +6,10 @@
     <OutputType>WinExe</OutputType>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
-    <Title>FFME Reference Player</Title>
+    <Title>PlanetEarth Player</Title>
     <AssemblyTitle>FFME Reference Player</AssemblyTitle>
-    <AssemblyName>ffmeplay.win</AssemblyName>
-    <RootNamespace>Unosquare.FFME.Windows.Sample</RootNamespace>
+    <AssemblyName>PlanetEarth.Player</AssemblyName>
+    <RootNamespace>Unosquare.FFME.Windows.Sample.App</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>..\Analyzers.ruleset</CodeAnalysisRuleSet>
@@ -30,7 +30,7 @@
     <Description>Reference implementation of a media player using the FFME</Description>
     <Copyright>Unosquare SA de CV, Mario Di Vece, and Contributors, (C) 2015-2019</Copyright>
     <PackageProjectUrl>https://github.com/unosquare/ffmediaelement</PackageProjectUrl>
-    <ApplicationIcon>ffmpeg.ico</ApplicationIcon>
+    <ApplicationIcon>chinaunicom.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -76,10 +76,6 @@
 
   <ItemGroup>
     <Folder Include="Properties\" />
-  </ItemGroup>
-
-  <ItemGroup>
-
   </ItemGroup>
 
   <ItemGroup>
